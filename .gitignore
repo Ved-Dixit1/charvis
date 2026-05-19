@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Databases
+*.db
+charvis.db
+antigravity.db
+
+# UI Build and node modules
+node_modules/
+.next/
+out/
+build/
+tsconfig.tsbuildinfo
+
+# Results
+pipeline_results.json

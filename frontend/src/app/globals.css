@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+:root {
+  --background: #08090f;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(13, 16, 28, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 25, 45, 0.85);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+/* Custom React Flow Style Overrides */
+.react-flow__background {
+  background-color: #06070a !important;
+}
+
+.react-flow__minimap {
+  background-color: rgba(10, 12, 22, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.react-flow__controls {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  background-color: rgba(13, 16, 28, 0.8) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.react-flow__controls-button {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94a3b8 !important;
+  fill: #94a3b8 !important;
+}
+
+.react-flow__controls-button:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: #a5b4fc !important;
+  fill: #a5b4fc !important;
+}
+
+/* Node Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.4), inset 0 0 5px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.8), inset 0 0 12px rgba(245, 158, 11, 0.4);
+    border-color: rgba(245, 158, 11, 1);
+  }
+}
+
+.node-pulse-running {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+/* Neon Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
