@@ -16,6 +16,8 @@
  \_____|_|  |_/_/    \_\_|  \_\    \/   |_____|_____/ 
 ```
 
+![Charvis Space-Age Dashboard Mockup](assets/dashboard_mockup.png)
+
 Charvis is an open-source, enterprise-grade AI execution platform that translates natural language requirements into **modular Directed Acyclic Graphs (DAG) of specialized, tool-calling AI agents**. 
 
 Equipped with a **Dual-Compute Layer Strategy**, Charvis dynamically provisions and resolves pipelines locally (offline GGUFs fetched from the Hugging Face Hub) or serverless (API fallbacks) using a **highly-secured isolated AST sandbox engine**. Live execution is visualised via a gorgeous glassmorphic React Flow canvas and polished real-time polling logs terminal.
@@ -25,6 +27,8 @@ Equipped with a **Dual-Compute Layer Strategy**, Charvis dynamically provisions 
 ## 📐 Platform Architecture
 
 Charvis acts as a compilation bridge between abstract human text and functional model runtime execution. 
+
+![Charvis Pipeline Architecture Flow](assets/architecture_flow.png)
 
 ```mermaid
 graph TD
@@ -51,6 +55,8 @@ graph TD
 ## 🛡️ AST Python Sandbox Safety Specs
 
 To prevent data corruption, server hijacking, or infinite runtimes during agent code generation, Charvis executes all script actions within a highly isolated custom static compiler layer.
+
+![Charvis Isolated AST Safety Sandbox](assets/safety_sandbox.png)
 
 | Feature / Attribute | Sandbox Policy | Rationale |
 | :--- | :--- | :--- |
